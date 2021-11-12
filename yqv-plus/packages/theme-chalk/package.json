@@ -1,0 +1,15 @@
+{
+  "name": "@yqv-plus/theme-chalk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@yqv-plus/theme-chalk": "^1.0.0"
+  }
+}

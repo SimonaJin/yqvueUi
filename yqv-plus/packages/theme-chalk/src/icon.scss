@@ -1,0 +1,316 @@
+@use './mixins/mixins.scss' as *;
+@font-face {
+  font-family: "z-ui-icons"; /* Project id 972522 */
+  src: url('./fonts/iconfont.woff2') format('woff2'),
+       url('./fonts/iconfont.woff') format('woff'),
+       url('./fonts/iconfont.ttf') format('truetype');
+}
+
+[class^='#{$namespace}-icon'], [class*='#{$namespace}-icon']{
+  font-family: "z-ui-icons" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.#{$namespace}-icon-search1:before {
+  content: "\e680";
+}
+
+.#{$namespace}-icon-biaoqian:before {
+  content: "\e637";
+}
+
+.#{$namespace}-icon-bukejian:before {
+  content: "\e638";
+}
+
+.#{$namespace}-icon-bianji:before {
+  content: "\e639";
+}
+
+.#{$namespace}-icon-dianzan:before {
+  content: "\e63a";
+}
+
+.#{$namespace}-icon-dingdan:before {
+  content: "\e63b";
+}
+
+.#{$namespace}-icon-dingwei:before {
+  content: "\e63c";
+}
+
+.#{$namespace}-icon-erweima:before {
+  content: "\e63d";
+}
+
+.#{$namespace}-icon-fenxiang:before {
+  content: "\e63e";
+}
+
+.#{$namespace}-icon-dianhua:before {
+  content: "\e63f";
+}
+
+.#{$namespace}-icon-fujian:before {
+  content: "\e640";
+}
+
+.#{$namespace}-icon-faxian:before {
+  content: "\e641";
+}
+
+.#{$namespace}-icon-gengduo:before {
+  content: "\e663";
+}
+
+.#{$namespace}-icon-gonggao:before {
+  content: "\e664";
+}
+
+.#{$namespace}-icon-gouwuche:before {
+  content: "\e665";
+}
+
+.#{$namespace}-icon-guanzhu:before {
+  content: "\e666";
+}
+
+.#{$namespace}-icon-huiyuan:before {
+  content: "\e667";
+}
+
+.#{$namespace}-icon-jinqian:before {
+  content: "\e668";
+}
+
+.#{$namespace}-icon-kejian:before {
+  content: "\e669";
+}
+
+.#{$namespace}-icon-lianxiren:before {
+  content: "\e66a";
+}
+
+.#{$namespace}-icon-kefu:before {
+  content: "\e66b";
+}
+
+.#{$namespace}-icon-luxiang:before {
+  content: "\e66c";
+}
+
+.#{$namespace}-icon-luyin:before {
+  content: "\e66d";
+}
+
+.#{$namespace}-icon-qidong:before {
+  content: "\e66e";
+}
+
+.#{$namespace}-icon-pinglun:before {
+  content: "\e66f";
+}
+
+.#{$namespace}-icon-shanchu:before {
+  content: "\e670";
+}
+
+.#{$namespace}-icon-saoma:before {
+  content: "\e671";
+}
+
+.#{$namespace}-icon-rili:before {
+  content: "\e672";
+}
+
+.#{$namespace}-icon-shezhi:before {
+  content: "\e673";
+}
+
+.#{$namespace}-icon-shipin:before {
+  content: "\e674";
+}
+
+.#{$namespace}-icon-shijianxuanzeqi:before {
+  content: "\e675";
+}
+
+.#{$namespace}-icon-shoucang:before {
+  content: "\e676";
+}
+
+.#{$namespace}-icon-sousuo:before {
+  content: "\e677";
+}
+
+.#{$namespace}-icon-shuaxin:before {
+  content: "\e678";
+}
+
+.#{$namespace}-icon-tishi:before {
+  content: "\e679";
+}
+
+.#{$namespace}-icon-tianjiahaoyou:before {
+  content: "\e67a";
+}
+
+.#{$namespace}-icon-wancheng:before {
+  content: "\e67b";
+}
+
+.#{$namespace}-icon-tupian:before {
+  content: "\e67c";
+}
+
+.#{$namespace}-icon-wenjian:before {
+  content: "\e67d";
+}
+
+.#{$namespace}-icon-wode:before {
+  content: "\e67e";
+}
+
+.#{$namespace}-icon-youjian:before {
+  content: "\e67f";
+}
+
+.#{$namespace}-icon-xiangji:before {
+  content: "\e681";
+}
+
+.#{$namespace}-icon-recondlist:before {
+  content: "\e642";
+}
+
+.#{$namespace}-icon-play-time:before {
+  content: "\e643";
+}
+
+.#{$namespace}-icon-sever-split:before {
+  content: "\e644";
+}
+
+.#{$namespace}-icon-sever-top:before {
+  content: "\e645";
+}
+
+.#{$namespace}-icon-action:before {
+  content: "\e646";
+}
+
+.#{$namespace}-icon-song-recond:before {
+  content: "\e647";
+}
+
+.#{$namespace}-icon-curtual:before {
+  content: "\e648";
+}
+
+.#{$namespace}-icon-moods:before {
+  content: "\e649";
+}
+
+.#{$namespace}-icon-special:before {
+  content: "\e64a";
+}
+
+.#{$namespace}-icon-shopping:before {
+  content: "\e64b";
+}
+
+.#{$namespace}-icon-weather:before {
+  content: "\e64c";
+}
+
+.#{$namespace}-icon-play-two:before {
+  content: "\e64d";
+}
+
+.#{$namespace}-icon-play-next:before {
+  content: "\e64e";
+}
+
+.#{$namespace}-icon-voice-two:before {
+  content: "\e64f";
+}
+
+.#{$namespace}-icon-play-prev:before {
+  content: "\e650";
+}
+
+.#{$namespace}-icon-stop:before {
+  content: "\e651";
+}
+
+.#{$namespace}-icon-play-onesong:before {
+  content: "\e652";
+}
+
+.#{$namespace}-icon-playlist:before {
+  content: "\e653";
+}
+
+.#{$namespace}-icon-search:before {
+  content: "\e654";
+}
+
+.#{$namespace}-icon-play-roundom:before {
+  content: "\e655";
+}
+
+.#{$namespace}-icon-edit-two:before {
+  content: "\e656";
+}
+
+.#{$namespace}-icon-notice:before {
+  content: "\e657";
+}
+
+.#{$namespace}-icon-user:before {
+  content: "\e658";
+}
+
+.#{$namespace}-icon-setting:before {
+  content: "\e659";
+}
+
+.#{$namespace}-icon-collectlist:before {
+  content: "\e65a";
+}
+
+.#{$namespace}-icon-play:before {
+  content: "\e65b";
+}
+
+.#{$namespace}-icon-songlist:before {
+  content: "\e65c";
+}
+
+.#{$namespace}-icon-collect:before {
+  content: "\e65d";
+}
+
+.#{$namespace}-icon-voice:before {
+  content: "\e65e";
+}
+
+.#{$namespace}-icon-sever:before {
+  content: "\e65f";
+}
+
+.#{$namespace}-icon-phone:before {
+  content: "\e660";
+}
+
+.#{$namespace}-icon-edit:before {
+  content: "\e661";
+}
+
+.#{$namespace}-icon-pwd:before {
+  content: "\e662";
+}
+
