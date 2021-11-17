@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "relyon": "mnpm || npm i",
-				"play":"node play",
-        "test": "echo \"Error: no test specified\" && exit 1"
+				"play":"pnpm -C play dev",
+				"lint": "eslint src/**/* test/**/* packages/**/**/**/** build/**/* --quiet",
+        "test": "npm run lint && cross-env CI_ENV=/dev/ BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"
     },
     "keywords": [
         "yqv",

@@ -1,8 +1,11 @@
+examples
+*.sh
 node_modules
 lib
 *.md
 *.scss
 *.woff
 *.ttf
+*.eot
 *.svg
 *.woff2

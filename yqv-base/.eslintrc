@@ -6,7 +6,9 @@
   "plugins": ["html", "json"],
   "extends": "elemefe",
   "rules": {
-    "no-restricted-globals": ["error", "event", "fdescribe"]
+    "no-restricted-globals": ["error", "event", "fdescribe"],
+    "no-console":  "off",
+    "generator-star-spacing": [2, {"before": false, "after": true}]
   },
   "parserOptions": {
     "ecmaVersion": 6,
