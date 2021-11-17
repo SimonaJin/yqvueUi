@@ -1,0 +1,26 @@
+@use './mixins/config.scss' as *;
+.yq-button-group{
+	display: inline-flex;
+	vertical-align: middle;
+	button{
+		position: relative;
+		border-radius: 0;
+		&:not(first-child){
+			margin-left: -1px;
+		}
+		&:first-child{
+			border-top-left-radius:$border-radius;
+			border-bottom-left-radius: $border-radius;
+		}
+		&:last-child{
+			border-top-right-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+		&:hover{
+			z-index:1
+		}
+		&:focus{
+			z-index:2
+		}
+	}
+}

@@ -17,5 +17,5 @@
 ├── .eslintrc                       // eslint 配置
 ├── .publish-ci.yml                 // npm 包发布、站点部署 CI 脚本
 ├── jest.config.js                  // Jest 配置文件
-├── .gitignore                      // package.json
+├── .gitignore                      // git配置
 └── package.json                    // package.json

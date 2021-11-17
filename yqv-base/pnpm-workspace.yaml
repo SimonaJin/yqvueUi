@@ -1,0 +1,5 @@
+packages:
+  - 'packages/**' # 存放编写的组件
+  - 'play/**' # 代码调试
+  - 'examples/**' # 文档
+  - 'src/utils/**' # 工具函数

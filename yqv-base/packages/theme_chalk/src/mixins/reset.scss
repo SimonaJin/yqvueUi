@@ -1,0 +1,149 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-size-adjust: 100%;   /*旋转屏幕时，字体大学调整的问题 ios与x端字体的 优化 */
+}
+
+body {
+    line-height:1;
+    /* 上下拉动滚动条卡顿、慢 */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    height:100%;
+    -webkit-text-size-adjust: none;
+    /* 移动背景高亮 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* 禁止文本复制 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    /* 长按页面出现闪退 */
+    -webkit-touch-callout:none;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+		background:transparent;
+		text-decoration: none;
+}
+
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+li{
+    list-style: none;
+}
+input,textarea{
+    border: 0;
+    /* iphone输入框内阴影 */
+    -webkit-appearance: none;
+}
+button{
+    /* ios和安卓触摸元素时候出现半透明遮罩 */
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+select option{
+    /* select 下拉框有对其*/
+    direction: rtl;
+}
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+::-webkit-input-placeholder{
+    color: #dedede;
+    font-size: 14px;
+}
+
+img{
+    display:inline-block;
+    max-width:100%;
+    height:auto;
+}

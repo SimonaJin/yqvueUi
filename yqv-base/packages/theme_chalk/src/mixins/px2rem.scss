@@ -1,0 +1,11 @@
+@use './config.scss' as *;
+
+@function px2rem($px){
+    @return $px / $font-basic * 1rem;
+}
+@function desk_ww($px){
+    @return $px / $desk-width * $vw-basic;
+}
+@function mb_ww($px){
+    @return $px / $mobil-width * $vw-basic;
+}

@@ -1,0 +1,8 @@
+node_modules
+lib
+*.md
+*.scss
+*.woff
+*.ttf
+*.svg
+*.woff2

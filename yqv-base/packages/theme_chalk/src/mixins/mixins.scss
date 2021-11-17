@@ -1,0 +1,5 @@
+//声明公共的sass方法
+@use 'config' as *;
+@use 'min' as *;
+@use 'px2rem' as *;
+@forward 'config';
