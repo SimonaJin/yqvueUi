@@ -1,4 +1,4 @@
-var webpackConfig = require('../../build/webpack.test.conf');
+var webpackConfig = require('../../build/webpack.test');
 module.exports = function(config) {
   config.set({
     browsers: ['PhantomJS'],

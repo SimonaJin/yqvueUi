@@ -11,9 +11,9 @@ const path = require('path');
 // 6. 引入'os' .EOL方法
 const osLine = require('os').EOL; // 模块提供了一些基本的系统操作函数
 // 定义 出口文件 path
-var OUT_PATH = path.join(__dirname, '../../packages/components/index.js');
+var OUT_PATH = path.join(__dirname, '../../src/index.js');
 // 导入模板 import 路径
-var IMPORT_TEMPLATE = 'import {{name}} from \'./{{package}}/index.js\';';
+var IMPORT_TEMPLATE = 'import {{name}} from \'../packages/components/{{package}}/index.js\';';
 // install模板名称
 var INSTALL_TEMPLATE = '	{{name}}';
 // 主模板 字符串模板格式
