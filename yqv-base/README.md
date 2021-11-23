@@ -1,3 +1,17 @@
+## 全局引入方式
+```
+import YqvBaseUi from 'yqv-base';
+import 'yqv-base/lib/theme-chalk/css/index.css';
+Vue.use(YqvBaseUi);
+```
+#### 引入部分组件
+```
+import {YqButton, YqIcon} from 'yqv-base';
+import 'yqv-base/lib/theme-chalk/css/index.css';
+Vue.use(YqButton);
+Vue.use(YqIcon);
+```
+
 ## 文档目录说明
 ├── build                           // 打包脚本 webpack
     ├── bin                         // 自动化脚本

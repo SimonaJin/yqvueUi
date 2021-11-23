@@ -5,10 +5,11 @@ import App from './app';
 // import '@yqv-base/theme_chalk/src/index.scss';
 
 
-import YqvBaseUi from 'yqv-base';
+import {YqButton, YqIcon} from 'yqv-base';
 import 'yqv-base/lib/theme-chalk/css/index.css';
-console.log(YqvBaseUi);
-Vue.use(YqvBaseUi);
+console.log(YqButton);
+Vue.use(YqButton);
+Vue.use(YqIcon);
 new Vue({
 	render: h => h(App)
 }).$mount('#app');
