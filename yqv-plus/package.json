@@ -1,5 +1,8 @@
 {
-  "private": true,
+	"name": "yqv-plus",
+	"version": "1.0.1",
+	"description": "A Component Library for Vue.js.",
+	"main": "dist/index.js",
   "scripts": {
     "dev": "pnpm -C play dev",
     "build": "gulp -f build/gulpfile.ts"
@@ -29,10 +32,5 @@
     "ts-morph": "^12.0.0",
     "typescript": "^4.4.4",
     "vue": "^3.2.20"
-  },
-  "dependencies": {
-    "@yqv-plus/components": "^1.0.0",
-    "@yqv-plus/theme-chalk": "^1.0.0",
-    "@yqv-plus/utils": "^1.0.0"
   }
 }

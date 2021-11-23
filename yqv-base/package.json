@@ -1,8 +1,8 @@
 {
     "name": "yqv-base",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "A Component Library for Vue.js.",
-    "main": "index.js",
+		"main": "lib/yqvue-ui.common.js",
     "scripts": {
         "relyon": "mnpm || npm i",
         "dev:play": "pnpm -C play dev",
@@ -23,9 +23,6 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@yqv-base/components": "^1.0.0",
-        "@yqv-base/theme_chalk": "^1.0.0",
-        "@yqv-base/utils": "^1.0.0",
         "async-validator": "^4.0.7",
         "babel-helper-vue-jsx-merge-props": "^2.0.3",
         "copy-webpack-plugin": "^9.1.0",

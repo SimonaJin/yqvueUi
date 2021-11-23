@@ -18,7 +18,7 @@ module.exports = {
     chunkFilename: '[id].js',
     libraryTarget: 'umd',
     libraryExport: 'default',
-    library: 'ELEMENT',
+    // library: 'YQVBASE',
     umdNamedDefine: true,
     globalObject: 'typeof self !== \'undefined\' ? self : this'
 	},

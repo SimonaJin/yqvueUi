@@ -1,10 +1,10 @@
 
 /* Automatically generated enter file by './build/bin/build-entry.js' */
-import Button from '../packages/components/button/index.js';
-import Icon from '../packages/components/icon/index.js';
+import YqButton from '../packages/components/button/index.js';
+import YqIcon from '../packages/components/icon/index.js';
 const plugins = [
-	Button,
-	Icon
+	YqButton,
+	YqIcon
 ]
 const install = function(Vue){
 	if (install.installed) return
@@ -20,9 +20,9 @@ if(typeof window !== 'undefined'&& window.Vue){
 // Vue.prototype.$loading = Loading.service;
 // Vue.prototype.$msgbox = MessageBox;
 export default {
-	version: '1.0.0',
+	version: '1.0.3',
 	// 导出的对象必须具有 install，才能被 Vue.use() 方法安装
 	install,
-	Button,
-	Icon
+	YqButton,
+	YqIcon
 }

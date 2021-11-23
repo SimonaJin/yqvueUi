@@ -56,7 +56,7 @@ var listTemplate = [];
 // 组件路径循环，includeComponentTemplate放入所有组件名字
 componentsNames.forEach(component => {
 // 把组件名字变成驼峰
-var componentName = uppercame(component);
+var componentName = 'Yq' + uppercame(component);
 // import引入文件 模板
 includeComponentTemplate.push(render(IMPORT_TEMPLATE, {
 	name: componentName,

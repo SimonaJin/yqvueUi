@@ -4,7 +4,8 @@ var path = require('path');
 exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../packages'),
-  examples: path.resolve(__dirname, '../examples')
+  examples: path.resolve(__dirname, '../examples'),
+	'yqv-base': path.resolve(__dirname, '../')
 };
 // js
 exports.jsexclude = /node_modules|utils\/popper\.js|utils\/date\.js/;

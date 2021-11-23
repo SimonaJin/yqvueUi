@@ -15,7 +15,7 @@ module.exports = {
     filename: 'yqvue-ui.common.js',
     chunkFilename: '[id].js',
     libraryExport: 'default',
-    library: 'ELEMENT',
+    // library: 'YQVBASE',
     libraryTarget: 'commonjs2'
   },
   resolve: {
