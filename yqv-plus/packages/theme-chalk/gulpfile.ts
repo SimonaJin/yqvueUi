@@ -25,10 +25,15 @@ function copyfont(){
 //把所有文件包括到外面的dist目录
 function copyfullStyle(){
 	return src(path.resolve(__dirname,'dist/**'))
-					.pipe(dest(path.resolve(__dirname,'../../dist/theme-chalk')))
+					.pipe(dest(path.resolve(__dirname,'../../dist/yqv-plus/theme-chalk')))
+}
+function copyStyle(){
+	return src(path.resolve(__dirname,'dist/css/index.css'))
+					.pipe(dest(path.resolve(__dirname,'../../dist/yqv-plus/dist')))
 }
 export default series(
 	compile,
 	copyfont,
-	copyfullStyle
+	copyfullStyle,
+	copyStyle
 )

@@ -1,5 +1,5 @@
 import { withTaskName } from './utils/index';
-import { outDir, projectRoot } from './utils/paths';
+import { outfullDir, projectRoot } from './utils/paths';
 import { buildConfig } from './utils/config';
 //专门打包utIl ,指令 hook的
 import {series, parallel, src, dest} from 'gulp'
@@ -26,7 +26,7 @@ export const buildPackages = (dirname:string, name:string) =>{
 			}),
 			withTaskName(`copy:${dirname}`, ()=>{
 				//放到es->utils 和lib ->utils
-				return src(`${output}/**`).pipe(dest(path.resolve(outDir,config.output.name,name)))
+				return src(`${output}/**`).pipe(dest(path.resolve(outfullDir,config.output.name,name)))
 			})
 			)
 	})

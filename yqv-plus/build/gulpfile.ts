@@ -10,9 +10,6 @@ import { genTypes, copyEntryTypes } from './gen-types';
 //5.打包单个组件
 //6.生成一个组件库
 //7.发布组件库
-const copySourceCode = () => async () => {
-	await run(`cp ${zpRoot}/package.json ${outDir}/package.json`)
-}
 export default series(
 	withTaskName('clean', async () => run('rm -rf ./dist')), //rm -rf ./dist
 	parallel(

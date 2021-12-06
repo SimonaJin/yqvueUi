@@ -17,7 +17,7 @@ export const run = async (command:string)=>{
 }
 export const pathRewriter = (format)=>{
 	return (id:string)=>{
-		id = id.replace("@yqv-plus",`yqv-plus/${format}`)
+		id = id.replace("@yqv-plus",format)
 		return id;
 	}
 }

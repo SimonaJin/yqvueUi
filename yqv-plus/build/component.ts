@@ -8,7 +8,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import {rollup, OutputOptions} from 'rollup'
 import { buildConfig } from './utils/config';
 import { pathRewriter, run } from './utils/index';
-import { compRoot, outDir} from "./utils/paths";
+import { compRoot, outfullDir} from "./utils/paths";
 import { genTypes } from './component-types' //给每个组件添加类型声明文件
 //打包每个组件
 const buildEachComponent = async() =>{
@@ -22,7 +22,7 @@ const buildEachComponent = async() =>{
 		const config = {
 			input,
 			plugins:[nodeResolve(),vue(),typescript(),commonjs()],
-			external:(id: string)=> /^vue/.test(id) || /^@z-plus/.test(id)
+			external:(id: string)=> /^vue/.test(id) || /^@yqv-plus/.test(id)
 		}
 		const options = Object.values(buildConfig).map((config) => ({	
 			format:config.format,
@@ -40,10 +40,10 @@ const buildEachComponent = async() =>{
 
 //拷贝文件 types->components 到es/lib下
 function copyTypes() {
-  const src = path.resolve(outDir, "types/components/");
+  const src = path.resolve(outfullDir, "types/components/");
   const copy = (module) => {
     let output = path.resolve(
-      outDir,
+      outfullDir,
       buildConfig[module].output.name,
       "components/"
     );
@@ -57,6 +57,7 @@ async function buildComponentEntry() {
 			input: path.resolve(compRoot, "index.ts"),
 			plugins: [typescript()],
 			external: () => true,
+
 	};
 
 	const bundle = await rollup(config);
@@ -65,6 +66,8 @@ async function buildComponentEntry() {
 					.map((config) => ({
 							format: config.format,
 							file: path.resolve(config.output.path, "components/index.js"),
+							indent: false,
+							exports: "named"
 					}))
 					.map((config) => bundle.write(config as OutputOptions))
 	);

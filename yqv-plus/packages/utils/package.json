@@ -2,14 +2,10 @@
   "name": "@yqv-plus/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "gulp"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@yqv-plus/utils": "^1.0.0"
-  }
+  "license": "ISC"
 }

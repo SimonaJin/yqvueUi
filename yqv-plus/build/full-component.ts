@@ -1,6 +1,6 @@
 import { pathRewriter } from './utils/index';
 import { buildConfig } from './utils/config';
-import { outDir, zpRoot } from './utils/paths';
+import { zpRoot,outfullDir } from './utils/paths';
 import {nodeResolve} from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import vue from 'rollup-plugin-vue'
@@ -22,23 +22,22 @@ const buildFull = async () =>{
 	const buildConfig =[
 		{
 			format:'umd',
-			file:path.resolve(outDir,'index.js'),
+			file:path.resolve(outfullDir,'index.js'),
 			name:'yqvPlus',//全局名字
-			exports:"named",//导出的名字 用命名的方式导出
+			exports: "named",//导出的名字 用命名的方式导出
 			globals:{
 				vue:"Vue"
 			}
 		},
 		{
 			format:'esm',
-			file:path.resolve(outDir,'index.esm.js'),
+			file:path.resolve(outfullDir,'index.esm.js'),
 		}
 	]
 	let bundle = await rollup(config);
 	return Promise.all(buildConfig.map(config=>bundle.write(config as OutputOptions)))
 
 }
-
 //打包组件库入口`yqv-plus`
 async function buildEntry() {
   const entryFiles = await fs.readdir(zpRoot, { withFileTypes: true });
@@ -58,7 +57,7 @@ async function buildEntry() {
       .map((config) => ({
         format: config.format,
         dir: config.output.path,
-        paths: pathRewriter(config.output.name),
+        paths: pathRewriter('.'),
       }))
       .map((option) => bundle.write(option as OutputOptions))
   );

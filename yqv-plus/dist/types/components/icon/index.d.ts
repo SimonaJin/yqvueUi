@@ -1,4 +1,4 @@
-declare const ZIcon: import("yqv-plus/es/utils/with-install").SFCWithInstall<import("vue").DefineComponent<{
+declare const YqIcon: import("es/utils/with-install").SFCWithInstall<import("vue").DefineComponent<{
     size: {
         type: NumberConstructor;
     };
@@ -17,5 +17,5 @@ declare const ZIcon: import("yqv-plus/es/utils/with-install").SFCWithInstall<imp
     size?: number;
     color?: string;
 }>, {}>>;
-export { ZIcon };
-export default ZIcon;
+export { YqIcon };
+export default YqIcon;

@@ -1,6 +1,6 @@
 import { buildConfig } from './utils/config';
 import { Project,ModuleKind,ScriptTarget,SourceFile} from 'ts-morph';
-import { outDir, zpRoot, projectRoot } from './utils/paths';
+import { outvplusDir, zpRoot, projectRoot } from './utils/paths';
 import glob from 'fast-glob';
 import path from 'path';
 import fs from 'fs/promises';
@@ -19,7 +19,7 @@ export const genEntryTypes = async () => {
       allowJs: true,
       emitDeclarationOnly: true,
       noEmitOnError: false,
-      outDir: path.resolve(outDir, "entry/types"),
+      outDir: path.resolve(outvplusDir, "entry/types"),
       target: ScriptTarget.ESNext,
       rootDir: zpRoot,
       strict: false,
@@ -51,13 +51,13 @@ export const genEntryTypes = async () => {
   await Promise.all(tasks);
 };
 export const copyEntryTypes = () => {
-	const src = path.resolve(outDir, "entry/types");
+	const src = path.resolve(outvplusDir, "entry/types");
 	const copy = (module) =>
 			parallel(
 					withTaskName(`copyEntryTypes:${module}`, () =>
 							run(
 									`cp -r ${src}/* ${path.resolve(
-											outDir,
+										outvplusDir,
 											buildConfig[module].output.path
 									)}/`
 							)

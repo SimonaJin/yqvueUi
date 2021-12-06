@@ -1,8 +1,8 @@
-import  {ZIcon} from '@yqv-plus/components/index';
+import  {YqIcon} from '@yqv-plus/components/index';
 import type { App } from 'vue';// ts中的优化 只获取类型
 
 const components = [
-	ZIcon
+	YqIcon
 ]
 
 const install = (app:App) =>{

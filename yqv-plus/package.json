@@ -1,15 +1,11 @@
 {
-	"name": "yqv-plus",
-	"version": "1.0.1",
-	"description": "A Component Library for Vue.js.",
-	"main": "dist/index.js",
   "scripts": {
     "dev": "pnpm -C play dev",
     "build": "gulp -f build/gulpfile.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
