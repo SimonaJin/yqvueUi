@@ -1,7 +1,8 @@
 import { series, parallel } from 'gulp';
 import { withTaskName, run } from './utils/index';
-import { outDir, zpRoot } from './utils/paths'
 import { genTypes, copyEntryTypes } from './gen-types';
+import path from 'path'
+import {outvplusDir, epPackage } from './utils/paths'
 //gulp 不叫打包 叫做
 //1.清理文件
 //2.打包工具方法
@@ -10,6 +11,13 @@ import { genTypes, copyEntryTypes } from './gen-types';
 //5.打包单个组件
 //6.生成一个组件库
 //7.发布组件库
+
+export const copyFiles = () => {
+  return Promise.all([
+    run(`cp ${epPackage} ${path.join(outvplusDir, 'package.json')}`),
+    run(`cp README.md ${outvplusDir}`)
+  ])
+}
 export default series(
 	withTaskName('clean', async () => run('rm -rf ./dist')), //rm -rf ./dist
 	parallel(
@@ -18,7 +26,7 @@ export default series(
 		withTaskName('buildComponent', () => run('pnpm run build buildComponent'))
 	),
 	parallel(
-		genTypes, copyEntryTypes()
+		genTypes, copyEntryTypes(),copyFiles
 	)
 )
 

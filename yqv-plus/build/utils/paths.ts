@@ -1,8 +1,12 @@
-import path from 'path';
-
-export const projectRoot = path.resolve(__dirname,'../../')
-export const outDir = path.resolve(__dirname,'../../dist')
-export const outvplusDir = path.resolve(__dirname,'../../dist/yqv-plus')
-export const outfullDir = path.resolve(__dirname,'../../dist/yqv-plus/dist')
-export const zpRoot = path.resolve(__dirname,'../../packages/yqv-plus')
-export const compRoot =  path.resolve(projectRoot,'packages/components')
+import { resolve } from 'path'
+export const projRoot = resolve(__dirname, '..', '..')
+export const projectRoot = resolve(__dirname,'../../')
+/** dist */
+export const outDir = resolve(projRoot,'dist')
+/** dist/yqv-plus */
+export const outvplusDir = resolve(outDir,'yqv-plus')
+/** dist/yqv-plus/dist */
+export const outfullDir = resolve(outvplusDir,'dist')
+export const zpRoot = resolve(projRoot,'packages/yqv-plus')
+export const compRoot =  resolve(projectRoot,'packages/components')
+export const epPackage = resolve(zpRoot, 'package.json')
