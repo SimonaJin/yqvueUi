@@ -1,8 +1,8 @@
 import {createApp} from 'vue'
 import App from './app.vue';
-import ZIcon from '@z-plus/components/icon'
-import '@z-plus/theme-chalk/src/index.scss';
+import YqIcon from 'yqv-plus'
+import 'yqv-plus/dist/index.css';
 const app = createApp(App);
 
-app.use(ZIcon);
+app.use(YqIcon);
 app.mount('#app')

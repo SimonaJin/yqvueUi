@@ -1,6 +1,6 @@
 {
   "name": "yqv-plus",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A Component Library for Vue.js.",
   "exports": {
     ".": {
@@ -13,7 +13,7 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "style": "dist/css/index.css",
+  "style": "dist/index.css",
   "unpkg": "dist/index.full.js",
   "jsdelivr": "dist/index.full.js",
   "sideEffects": [

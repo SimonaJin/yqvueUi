@@ -8,7 +8,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import {rollup, OutputOptions} from 'rollup'
 import { buildConfig } from './utils/config';
 import { pathRewriter, run } from './utils/index';
-import { compRoot, outfullDir} from "./utils/paths";
+import { compRoot, outvplusDir,outDir} from "./utils/paths";
 import { genTypes } from './component-types' //给每个组件添加类型声明文件
 //打包每个组件
 const buildEachComponent = async() =>{
@@ -40,10 +40,10 @@ const buildEachComponent = async() =>{
 
 //拷贝文件 types->components 到es/lib下
 function copyTypes() {
-  const src = path.resolve(outfullDir, "types/components/");
+  const src = path.resolve(outDir, "types/components/");
   const copy = (module) => {
     let output = path.resolve(
-      outfullDir,
+      outvplusDir,
       buildConfig[module].output.name,
       "components/"
     );

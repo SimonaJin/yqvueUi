@@ -12,12 +12,14 @@ import {outvplusDir, epPackage } from './utils/paths'
 //6.生成一个组件库
 //7.发布组件库
 
+// 拷贝文件
 export const copyFiles = () => {
   return Promise.all([
     run(`cp ${epPackage} ${path.join(outvplusDir, 'package.json')}`),
     run(`cp README.md ${outvplusDir}`)
   ])
 }
+
 export default series(
 	withTaskName('clean', async () => run('rm -rf ./dist')), //rm -rf ./dist
 	parallel(

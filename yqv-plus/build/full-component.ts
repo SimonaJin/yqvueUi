@@ -18,11 +18,11 @@ const buildFull = async () =>{
 	}
 	// 整个组件库 两种使用方式 import 导入组件库 在浏览器中使用 script
 	//esm  umd
-
+//dist/element-plus/dist
 	const buildConfig =[
 		{
 			format:'umd',
-			file:path.resolve(outfullDir,'index.js'),
+			file:path.resolve(outfullDir,'index.full.js'),
 			name:'yqvPlus',//全局名字
 			exports: "named",//导出的名字 用命名的方式导出
 			globals:{
@@ -31,7 +31,7 @@ const buildFull = async () =>{
 		},
 		{
 			format:'esm',
-			file:path.resolve(outfullDir,'index.esm.js'),
+			file:path.resolve(outfullDir,'index.full.esm.js'),
 		}
 	]
 	let bundle = await rollup(config);
@@ -43,9 +43,9 @@ async function buildEntry() {
   const entryFiles = await fs.readdir(zpRoot, { withFileTypes: true });
   const entryPoints = entryFiles
     .filter((f) => f.isFile())
-    .filter((f) => !["package.json"].includes(f.name))
+    .filter((f) => !["package.json","README.md"].includes(f.name))
     .map((f) => path.resolve(zpRoot, f.name));
-
+	
   const config = {
     input: entryPoints,
     plugins: [nodeResolve(), vue(), typescript()],
