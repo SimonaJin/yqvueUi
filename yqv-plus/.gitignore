@@ -1,12 +1,11 @@
-# Editor directories and files
-.idea
-
-# Package Manager
-.pnpm-debug.log*
-
-# System
-.DS_Store
-
-# Bundle
+node_modules
 dist
-
+.DS_Store
+npm-debug.log
+pnpm-debug.log
+npm-debug.log.*
+pnpm-debug.log.*
+.idea
+.vscode
+.npmrc
+.envrc
