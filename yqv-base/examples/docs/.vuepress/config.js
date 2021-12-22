@@ -1,0 +1,38 @@
+const path = require('path')
+module.exports = {
+	title: 'yq-ui', // 设置网站标题
+	description: 'ui组件库', //描述
+	dest: './build', // 设置输出目录
+	base:'/',//打包静态资源根目录
+	port:'9600',
+	plugins: ['autobar'],
+	themeConfig: { //主题配置
+			nav: [//头
+					{ text: '主页', link: '/' },
+					// { text: '联系我', link: '/contact/' },
+					// { text: '我的博客', link: 'https://' },
+			],
+			// 为以下路由添加侧边栏		
+			sidebar: {
+				'/guide/': [
+					{    // 分组名
+						collapsable: false, // 可选的, 默认值是 true
+						//分组下文件['文件名','显示名称']
+						children: [
+							'button','icon'
+						]
+					}
+				],
+			}
+	},
+	chainWebpack: config => {
+		config.resolve.alias.set('core-js/library/fn', 'core-js/features')
+	},
+	configureWebpack: {
+		resolve: {
+			alias: {
+				'@src': path.resolve(__dirname, '../../src/'),
+			}
+		}
+	}
+}
