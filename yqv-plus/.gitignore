@@ -2,7 +2,6 @@
 .idea
 
 # Package Manager
-node_modules
 .pnpm-debug.log*
 
 # System
@@ -11,16 +10,3 @@ node_modules
 # Bundle
 dist
 
-node_modules
-.DS_Store
-npm-debug.log
-pnpm-debug.log
-lerna-debug.log
-npm-debug.log.*
-pnpm-debug.log.*
-lerna-debug.log.*
-dist
-.idea
-.vscode
-.npmrc
-.envrc
