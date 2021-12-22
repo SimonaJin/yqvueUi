@@ -14,7 +14,7 @@
 <script>
 import { iconType, buttonSizeMap } from "../config.js";
 export default {
-  name: "yqButton",
+  name: "YqButton",
   props: {
     type: {
 			default: iconType.defaults,

@@ -1,8 +1,8 @@
 {
     "name": "yqv-base",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "description": "A Component Library for Vue.js.",
-		"main": "lib/yqvue-ui.common.js",
+    "main": "lib/yqvue-ui.common.js",
     "scripts": {
         "relyon": "mnpm || npm i",
         "dev:play": "pnpm -C play dev",

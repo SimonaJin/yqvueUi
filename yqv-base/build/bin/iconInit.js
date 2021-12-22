@@ -5,7 +5,7 @@ const postcss = require('postcss');
 
 // 2.用fs 读取 icon.scss文件 注意路径 可以用path
 var fontFile = fs.readFileSync(
-	path.resolve(__dirname, '../../packages/theme_chalk/src/icon.scss'),
+	path.resolve(__dirname, '../../packages/theme_chalk/src/style/icon.scss'),
 	'utf8'
 );
 

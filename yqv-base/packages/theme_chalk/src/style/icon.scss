@@ -1,12 +1,12 @@
-@use './mixins/mixins.scss' as *;
+@use '../mixins/mixins.scss' as *;
 @font-face {
   font-family: "yq-icon"; /* Project id 1540478 */
-  src: url('./fonts/iconfont.eot'); /* IE9 */
-  src: url('./fonts/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/iconfont.woff2') format('woff2'),
-       url('./fonts/iconfont.woff') format('woff'),
-       url('./fonts/iconfont.ttf') format('truetype'),
-       url('./fonts/iconfont.svg') format('svg');
+  src: url('../fonts/iconfont.eot'); /* IE9 */
+  src: url('../fonts/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/iconfont.woff2') format('woff2'),
+       url('../fonts/iconfont.woff') format('woff'),
+       url('../fonts/iconfont.ttf') format('truetype'),
+       url('../fonts/iconfont.svg') format('svg');
 }
 
 [class^='#{$namespace}-icon'],[class*='#{$namespace}-icon'] {

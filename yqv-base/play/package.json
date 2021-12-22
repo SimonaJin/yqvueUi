@@ -17,6 +17,6 @@
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {
-    "yqv-base": "^1.0.4"
+    "yqv-base": "^1.0.6"
   }
 }

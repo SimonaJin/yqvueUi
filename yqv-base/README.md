@@ -33,3 +33,7 @@ Vue.use(YqIcon);
 ├── jest.config.js                  // Jest 配置文件
 ├── .gitignore                      // git配置
 └── package.json                    // package.json
+
+- 登录 npm login
+- package.json 改版本再执行 npm run dist
+- 发布 npm publish

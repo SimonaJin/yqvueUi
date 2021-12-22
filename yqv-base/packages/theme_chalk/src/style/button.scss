@@ -1,6 +1,6 @@
-@use './mixins/config.scss' as *;
-@use './mixins/min' as *;
-@use './mixins/px2rem' as *;
+@use '../mixins/config.scss' as *;
+@use '../mixins/min' as *;
+@use '../mixins/px2rem' as *;
 //-----------------  button
 .yq-button{
 	box-sizing: border-box;

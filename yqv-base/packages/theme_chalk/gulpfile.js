@@ -10,7 +10,7 @@ const { series, src, dest } = require('gulp');
 // sass编译处理
 function compile() {
 	const sass = gulpSass(dartSass);
-	return src(path.resolve(__dirname, './src/*.scss'))
+	return src(path.resolve(__dirname, './src/style/*.scss'))
 					.pipe(sass.sync())
 					.pipe(autoprefixer())
 					.pipe(cleanCss())
