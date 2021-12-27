@@ -1,0 +1,41 @@
+{
+  "presets": [
+    [
+      "env",
+      // 添加以下：
+      {
+          "targets": {
+              "node": "current" // 根据当前节点版本进行编译
+          }
+      }
+    ]
+  ],
+  "plugins": ["transform-vue-jsx"],
+  "env": {
+		"utils": {
+      "presets": [
+        [
+          "env",
+          {
+            "loose": true,
+            "modules": "commonjs",
+            "targets": {
+              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+            }
+          }
+        ],
+      ],
+      "plugins": [
+        ["module-resolver", {
+          "root": ["yqv-base"],
+          "alias": {
+            "yqv-base/src": "yqv-basei/lib"
+          }
+        }]
+      ]
+    },
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  }
+}

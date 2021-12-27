@@ -1,10 +1,21 @@
 <template>
   <button
-		:class="btnClass"
+	:class="[
+      type ? 'yq-button-' + type : '',
+      size ? 'yq-button-' + size : '',
+      {
+        'yq-button-disabled': disabled,
+        'yq-button-loading': loading,
+        'yq-button-plain': plain,
+        'is-round': round,
+        'is-circle': circle
+      }
+    ]"
     :disabled="disabled"
     @click="hanleClickButton"
   >
 	<div class="yq-button_content">
+		<i class="yq-icon-loading" v-if="loading"></i>
  		<yq-icon v-if="icon" :icon="icon"></yq-icon>
     <span v-if="icon" class="button-text"><slot></slot></span>
     <slot v-else></slot>
@@ -19,33 +30,22 @@ export default {
     type: {
 			default: iconType.defaults,
     	type: String,
-			validator(type){
-				if(type && !['warning','success','danger','info','primary'].includes(type)){
-					console.error('type类型必须是：'+['warning','success','danger','info','primary'].join('、'))
-				}
-				return true
-			}
     },
     size: {
       default: buttonSizeMap.large,
       type: String,
     },
-    plain: {
-      default: false,
-      type: Boolean,
-    },
     icon: String,
 		postion:String,
+    loading: Boolean,
     disabled: Boolean,
+    plain: Boolean,
+    autofocus: Boolean,
+    round: Boolean,
+    circle: Boolean,
 		iconPosition:{
 			type:String,
 			default:"left",
-			validator(type){
-					if(type && !['left','right'].includes(type)){
-					console.error('iconPosition的值必须是：'+['left','right'].join('、'))
-				}
-				return true
-			}
 		}
   },
 	computed:{

@@ -3,7 +3,8 @@ import Vue from 'vue'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css'
 
-import YqvBaseUi from 'yqv-base';
+// import YqvBaseUi from 'yqv-base';
+import {YqButton} from 'yqv-base';
 import 'yqv-base/lib/theme-chalk/css/index.css';
 
 Vue.directive('highlight',function(el){
@@ -15,7 +16,7 @@ Vue.directive('highlight',function(el){
 export default ({
 	Vue, // VuePress 正在使用的 Vue 构造函数
 })=>{
-	Vue.use(YqvBaseUi)
+	Vue.use(YqButton)
 			// import('yqv-base').then(m => {
 			// 	Vue.use(m.default)
 			// })

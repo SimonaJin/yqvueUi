@@ -1,21 +1,51 @@
-import Vue from 'vue';
+import { createTest, destroyVM } from '../util';
 import YqButton from '@yqv-base/components/button';
 
-describe('Counter.vue', () => {
-
-  it('点击按钮后, count的值应该为1', () => {
-    // 获取组件实例
-    const Constructor = Vue.extend(YqButton);
-    // 挂载组件
-    const vm = new Constructor().$mount();
-    // 获取button
-    const button = vm.$el.querySelector('button');
-    // 新建点击事件
-    const clickEvent = new window.Event('click');
-    // 触发点击事件
-    button.dispatchEvent(clickEvent);
-    // 监听点击事件
-    vm._watcher.run();
-
+describe('YqButton', () => {
+	let vm;
+	afterEach(() => {
+    destroyVM(vm);
+  });
+	it('create', () => {
+    vm = createTest(YqButton, {
+      type: 'primary'
+    }, true);
+    let buttonElm = vm.$el;
+    expect(buttonElm.classList.contains('yq-button-primary')).to.be.true;
+  });
+	it('disabled', () => {
+    vm = createTest(YqButton, {
+      disabled: true
+    }, true);
+    let buttonElm = vm.$el;
+    expect(buttonElm.classList.contains('yq-button-disabled')).to.be.true;
+  });
+  it('size', () => {
+    vm = createTest(YqButton, {
+      size: 'normal'
+    }, true);
+    let buttonElm = vm.$el;
+    expect(buttonElm.classList.contains('yq-button-normal')).to.be.true;
+  });
+  it('plain', () => {
+    vm = createTest(YqButton, {
+      plain: true
+    }, true);
+    let buttonElm = vm.$el;
+    expect(buttonElm.classList.contains('yq-button-plain')).to.be.true;
+  });
+	it('round', () => {
+    vm = createTest(YqButton, {
+      round: true
+    }, true);
+    let buttonElm = vm.$el;
+    expect(buttonElm.classList.contains('is-round')).to.be.true;
+  });
+  it('circle', () => {
+    vm = createTest(YqButton, {
+      circle: true
+    }, true);
+    let buttonElm = vm.$el;
+    expect(buttonElm.classList.contains('is-circle')).to.be.true;
   });
 });

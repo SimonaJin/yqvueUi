@@ -1,16 +1,25 @@
 var webpackConfig = require('../../build/webpack.test');
 module.exports = function(config) {
   config.set({
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
     // 测试框架
-    frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
+    frameworks: ['mocha', 'chai'],
     // 测试报告
     reporters: ['spec', 'coverage'],
     // 测试入口文件
-    files: ['./index.js'],
+    files: ['./specs/*.spec.js'],
+    // karma plugin
+    plugins: [
+      'karma-chrome-launcher',
+      'karma-webpack',
+      'karma-mocha',
+      'karma-chai',
+      'karma-spec-reporter',
+      'karma-coverage'
+    ],
     // 预处理器 karma-webpack
     preprocessors: {
-      './index.js': ['webpack', 'sourcemap']
+      './specs/*.spec.js': ['webpack', 'coverage']
     },
     // Webpack配置
     webpack: webpackConfig,

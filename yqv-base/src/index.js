@@ -20,7 +20,7 @@ if(typeof window !== 'undefined'&& window.Vue){
 // Vue.prototype.$loading = Loading.service;
 // Vue.prototype.$msgbox = MessageBox;
 export default {
-	version: '1.0.7n',
+	version: '1.0.8',
 	// 导出的对象必须具有 install，才能被 Vue.use() 方法安装
 	install,
 	YqButton,
