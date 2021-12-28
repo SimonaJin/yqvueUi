@@ -3,9 +3,9 @@ module.exports = {
 	title: 'yq-ui', // 设置网站标题
 	description: 'ui组件库', //描述
 	dest: './build', // 设置输出目录
-	base:'/',//打包静态资源根目录
+	base:'/yqvueUi/yqv-base/',//打包静态资源根目录, 部署到github相关配置
 	port:'9600',
-	plugins: ['autobar'],
+	plugins: ['autobar',['@vuepress/plugin-back-to-top', false]],
 	themeConfig: { //主题配置
 			nav: [//头
 					{ text: '主页', link: '/' },
@@ -16,6 +16,16 @@ module.exports = {
 			sidebar: {
 				'/guide/': [
 					{    // 分组名
+						title: '开发指南',
+						sidebarDepth: 1,
+						collapsable: false, // 可选的, 默认值是 true
+						//分组下文件['文件名','显示名称']
+						children: [
+							'installation','quickstart'
+						]
+					},
+					{    // 分组名
+						title: '组件',
 						collapsable: false, // 可选的, 默认值是 true
 						//分组下文件['文件名','显示名称']
 						children: [
