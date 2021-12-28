@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
 	title: 'yq-ui', // 设置网站标题
 	description: 'ui组件库', //描述
-	dest: './build', // 设置输出目录
+	dest: './dist', // 设置输出目录
 	base:'/yqvueUi/',//打包静态资源根目录, 部署到github相关配置
 	port:'9600',
 	plugins: ['autobar',['@vuepress/plugin-back-to-top', false]],
