@@ -169,7 +169,7 @@ importers:
       webpack: 4.46.0_webpack-cli@4.9.1
       webpack-cli: 4.9.1_9c6227b1f4ab411ec71902ed1b15f9d5
       webpack-dev-server: 3.11.3_webpack-cli@4.9.1+webpack@4.46.0
-      yqv-base: 1.0.6_webpack@4.46.0
+      yqv-base: link:..
 
   packages/components:
     specifiers: {}
